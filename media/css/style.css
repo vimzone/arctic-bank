@@ -1,0 +1,802 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat";
+    background-color: #e8f0f7;
+}
+
+/* Google font*/
+.montserrat-uniqueclassname {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+:focus-visible {
+    outline: 2px solid rgb(200, 210, 228);
+    outline-offset: 2px;
+}
+
+/* HEADINGS */
+h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 22px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+/* HEADER */
+.header {
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #b0d6f5;
+}
+
+/* LOGO */
+.logo {
+    font-size: 25px;
+    color: rgb(26, 26, 26);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* NAVIGATION */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+}
+
+.nav-list li {
+    margin-left: 15px;
+}
+
+.nav-list li a {
+    color: rgb(27, 26, 26);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-list li a:hover {
+    text-decoration: underline;
+}
+
+.crumb {
+    background-color: #e2ecf5;
+    padding: 2px 10px;
+}
+
+.crumb a {
+    text-decoration: none;
+}
+
+/* CONTAINER */
+.container {
+    display: grid;
+    grid-template-areas: "content content content";
+    grid-template-columns: 1fr 1fr;
+    width: 85%;
+    margin: auto;
+    min-height: 100vh;
+}
+
+.content {
+    grid-area: content;
+    display: grid;
+    gap: 20px;
+}
+
+/* SECTION 1 */
+.content-article {
+    background-color: rgb(243, 246, 255);
+    padding: 15px;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    display: grid;
+}
+
+.intro img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.txt {
+    border-radius: 5px;
+    padding: 15px;
+    word-spacing: 1px;
+    line-height: 1.4;
+}
+
+.txt li {
+    list-style-position: inside;
+}
+
+/* BUTTONS */
+/* Become a Customer, Login, Loan Calculator, Buy Insurance */
+.customer-btn,
+.loan-btn,
+.buy-btn,
+.login-btn {
+    display: block;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 20px;
+    padding: 7px 30px;
+    border-radius: 50px;
+    color: rgb(26, 26, 26);
+    background-color: #b0d6f5;
+}
+
+.buy-btn,
+.login-btn {
+    margin-top: 45px;
+}
+
+.customer-btn {
+    margin-top: 20px;
+}
+
+.customer-btn:hover,
+.loan-btn:hover,
+.buy-btn:hover,
+.login-btn:hover,
+.continue-btn:hover,
+.learn-more-btn:hover {
+    background-color: #85b1d5;
+}
+
+/* The buttons on index and support pages */
+.index-btn {
+    text-decoration: none;
+    color: rgb(26, 26, 26);
+}
+
+.index-btn:visited {
+    color: rgb(26, 26, 26);
+}
+
+.index-btn:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: #85b1d5;
+}
+
+/* Learn more button */
+.learn-more-btn {
+    display: block;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 15px;
+    padding: 7px 30px;
+    border-radius: 50px;
+    color: rgb(26, 26, 26);
+    background-color: #b0d6f5;
+}
+
+/* Login page buttons */
+.continue-btn {
+    display: block;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 30px;
+    padding: 7px 30px;
+    border-radius: 50px;
+    color: rgb(26, 26, 26);
+    background-color: #b0d6f5;
+}
+
+.forgot-link {
+    color: rgb(26, 26, 26);
+    text-decoration-color: #85b1d5;
+}
+
+.forgot-link:hover {
+    text-decoration-thickness: 2px;
+}
+
+.another-bank-link {
+    display: inline-block;
+    text-decoration-color: #85b1d5;
+    text-align: center;
+    justify-content: center;
+    border-color: #e8f0f7;
+    margin: 0 auto;
+    border-radius: 50px;
+    color: rgb(26, 26, 26);
+    width: fit-content;
+    padding: 15px 15px;
+}
+
+.another-bank-link:hover {
+    background-color: #e8f0f7;
+}
+
+/* CARDS */
+.card-container {
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.card,
+.support-card {
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px 5px 0 0;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h2 {
+    color: rgb(26, 26, 26);
+    margin-bottom: 6px;
+    align-self: center;
+}
+
+.card-content h3 {
+    margin-bottom: 6px;
+}
+
+.card-content p {
+    line-height: 1.5;
+}
+
+/* CUSTOMER FORM */
+.customer-container {
+    max-width: 700px;
+    margin: auto;
+    background-color: rgb(249, 249, 250);
+    border-radius: 0.5%;
+    padding: 10px;
+}
+
+form {
+    display: grid;
+    gap: 20px;
+}
+
+.login-container h1,
+.customer-container h1 {
+    text-align: center;
+}
+
+label {
+    font-weight: bold;
+}
+
+input,
+select,
+textarea,
+button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid lightgray;
+    margin-bottom: 5px;
+}
+
+.radio {
+    display: inline-flex;
+    align-items: center;
+}
+
+.radio-input {
+    margin: 0 0.5rem 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* The buttons of customer form */
+.btn {
+    display: flex;
+    justify-content: space-between;
+    gap: 300px;
+}
+
+button[type=submit] {
+    background-color: #b0d6f5;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* RESET BUTTON */
+button[type=reset] {
+    background-color: rgb(161, 159, 168);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #85b1d5;
+}
+
+button[type=reset]:hover {
+    background-color: rgb(124, 120, 135);
+}
+
+/* LOGIN FORM */
+.login-container {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: rgb(243, 246, 255);
+    ;
+    border-radius: 1%;
+    padding: 10px;
+}
+
+.login-container img {
+    height: auto;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+/* SUPPORT CARDS */
+.support-card img {
+    width: 55%;
+    height: auto;
+    border-radius: 5px 5px 0 0;
+    margin-top: 20px;
+    object-fit: cover;
+}
+
+/* SUPPORT */
+.support-container {
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.support-card {
+    margin-top: 15px;
+}
+
+.support-cards h2 {
+    text-align: center;
+}
+
+dl {
+    display: grid;
+    grid-gap: 4px 16px;
+    grid-template-columns: max-content;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin: 0;
+    grid-column-start: 2;
+}
+
+/* INSURANCE SECTION 3 */
+.extra-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.extra-card {
+    background-color: rgb(243, 246, 255);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 25px;
+}
+
+.extra-card p {
+    margin: 20px 0;
+}
+
+.extra-card h3 {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.extra-link {
+    color: rgb(26, 26, 26);
+    text-decoration: none;
+}
+
+.extra-link:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-decoration-color: #85b1d5;
+}
+
+/* INVESTING */
+.info-container {
+    background-color: rgb(243, 246, 255);
+    display: block;
+    margin: 0 auto;
+}
+
+.info-txt {
+    padding: 20px;
+}
+
+.info-txt p {
+    margin: 15px 0 5px 0;
+    line-height: 1.5;
+}
+
+.info-txt h2 {
+    margin-bottom: 10px;
+}
+
+ol li {
+    margin: 16px 0 16px 0;
+}
+
+/* BANKING */
+/* Table */
+.compare-container {
+    background-color: rgb(243, 246, 255);
+}
+
+.compare-container h3 {
+    font-size: 25px;
+    margin: 10px;
+}
+
+.compare-table {
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 16px;
+    border: 1px solid #ddd;
+}
+
+caption {
+    font-size: 20px;
+    text-align: left;
+    margin: 10px;
+}
+
+/* CARDS THAT HAVE LINKS OR FAQ */
+/* Used on banking and loans */
+.word-container {
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.word-card {
+    background-color: rgb(243, 246, 255);
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.word-content {
+    padding: 20px;
+    text-align: left;
+}
+
+.word-content h2 {
+    color: rgb(26, 26, 26);
+    margin: 5px 0 5px 0;
+    padding: 15px;
+}
+
+.word-content p {
+    line-height: 1.5;
+}
+
+.word-content a {
+    display: block;
+    text-decoration: none;
+    justify-content: center;
+    border-color: #e8f0f7;
+    margin: 0 auto;
+    color: rgb(26, 26, 26);
+    padding: 15px 15px;
+    border-top: 3px solid #e2ecf5;
+}
+
+.word-content a:hover {
+    background-color: #e8f0f7;
+}
+
+.word-content a:visited {
+    color: rgb(26, 26, 26);
+}
+
+/* LOANS */
+.calculate {
+    margin-top: 20px;
+}
+
+.loan-word-container {
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* FOOTER */
+.footer {
+    background-color: #b0d6f5;
+    color: rgb(27, 26, 26);
+    padding: 10px;
+    text-align: center;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 1200px) {
+    .card-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    h1 {
+        margin-bottom: 0;
+    }
+
+    .nav {
+        flex-direction: column;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+        text-align: center
+    }
+
+    .nav-list li {
+        margin: 10px 0;
+        border-bottom: 1px solid #bee2ff;
+    }
+
+    .nav-list li a:hover {
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .content {
+        gap: 10px;
+    }
+
+    .card-container,
+    .extra-container,
+    .loan-word-container,
+    .word-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .support-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .content-article {
+        grid-template-columns: 1fr;
+    }
+
+    .customer-btn,
+    .loan-btn,
+    .buy-btn,
+    .login-btn {
+        margin-top: 10px;
+    }
+
+    .calculate {
+        margin-top: 0px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        margin-bottom: 0;
+    }
+
+    .nav {
+        flex-direction: column;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+        text-align: center
+    }
+
+    .nav-list li {
+        margin: 10px 0;
+        border-bottom: 1px solid #bee2ff;
+    }
+
+    .nav-list li a:hover {
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .content {
+        gap: 10px;
+    }
+
+    .card-container,
+    .extra-container,
+    .loan-word-container,
+    .word-container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .support-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .content-article {
+        grid-template-columns: 1fr;
+    }
+
+    .customer-btn,
+    .loan-btn,
+    .buy-btn,
+    .login-btn {
+        margin-top: 15px;
+    }
+
+    .calculate {
+        margin-top: 0px;
+    }
+
+    .info-txt {
+        padding: 15px;
+    }
+
+    .content-article {
+        padding: 5px;
+        gap: 0px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .compare-table {
+        font-size: small
+    }
+
+    .txt {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 360px) {
+    h1 {
+        margin-bottom: 0;
+    }
+
+    .nav {
+        flex-direction: column;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+        text-align: center
+    }
+
+    .nav-list li {
+        margin: 10px 0;
+        border-bottom: 1px solid #bee2ff;
+    }
+
+    .nav-list li a:hover {
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .content {
+        gap: 10px;
+    }
+
+    .card-container,
+    .extra-container,
+    .loan-word-container,
+    .word-container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .support-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .content-article {
+        grid-template-columns: 1fr;
+    }
+
+    .customer-btn,
+    .loan-btn,
+    .buy-btn,
+    .login-btn {
+        margin-top: 10px;
+    }
+
+    .calculate {
+        margin-top: 0px;
+    }
+
+    .info-txt {
+        padding: 15px;
+    }
+
+    .content-article {
+        padding: 5px;
+        gap: 0px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .compare-table {
+        font-size: x-small;
+    }
+
+    .txt {
+        padding: 10px;
+    }
+}
